@@ -1,0 +1,14 @@
+{
+  "name": "web-cli",
+  "version": "1.0.0",
+  "description": "web dev cli",
+  "author": "LeoJ",
+  "bin": {
+    "web": "./src/index.js"
+  },
+  "dependencies": {
+    "commander": "^9.4.0",
+    "download-git-repo": "^3.0.2"
+  },
+  "license": "ISC"
+}
