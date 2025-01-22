@@ -1,5 +1,5 @@
-import path from 'path';
-import fs from 'fs';
+import path from 'node:path';
+import fs from 'node:fs';
 import inquirer from 'inquirer';
 import ora from 'ora';
 import chalk from 'chalk';
@@ -11,7 +11,7 @@ export default (program) => {
         inquirer.prompt([
             {
                 name: 'author',
-                message: '你的名字是：'
+                message: '作者'
             },
             {
                 name: 'version',
@@ -29,7 +29,7 @@ export default (program) => {
             const downloadPath = path.join(process.cwd(), name)
             const loading = ora('template downloading...');
             loading.start()
-            download(`LeoJ340/webpack-template`, downloadPath, err => {
+            download(`LeoJ340/webpack-template#template`, downloadPath, err => {
                 if (!err) {
                     loading.succeed();
                     const time = (new Date().getTime() - beginTime) / 1000
